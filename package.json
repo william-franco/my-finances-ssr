@@ -1,8 +1,11 @@
 {
   "name": "my-finances-ssr",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "license": "MIT",
+  "version": "1.0.0",
+  "author": "William Franco",
+  "description": "",
   "scripts": {
     "clean": "rm -rf node_modules/ && rm -rf dist/ && npm install",
     "dev": "node server",
