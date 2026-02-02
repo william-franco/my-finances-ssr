@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "clean": "rm -rf node_modules/ && rm -rf dist/ && npm install",
     "dev": "node server",
     "build": "npm run build:client && npm run build:server",
     "build:client": "vite build --outDir dist/client",
@@ -11,11 +12,15 @@
     "preview": "cross-env NODE_ENV=production node server"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.17",
+    "lucide-react": "^0.553.0",
     "compression": "^1.8.1",
     "express": "^5.2.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "sirv": "^3.0.2"
+    "sirv": "^3.0.2",
+    "recharts": "^3.4.1",
+    "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
