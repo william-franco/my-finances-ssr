@@ -1,6 +1,6 @@
 # My Finances SSR
 
-Under construction.
+Complete SSR financial dashboard with visualization of income and expenses through pie and bar charts, expense analysis by category, and filters by period. Responsive interface with dark mode, data persistence, and real-time metrics for balance, highest spending, and dominant category.
 
 
 ## ScreenShots
