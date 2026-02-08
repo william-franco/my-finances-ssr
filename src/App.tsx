@@ -481,28 +481,7 @@ export default function FinanceDashboard() {
   // Render
   return (
     <>
-      <style>{`
-        ::-webkit-scrollbar { width: 10px; height: 10px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 5px; }
-        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
-        .dark ::-webkit-scrollbar-thumb { background: #475569; }
-        .dark ::-webkit-scrollbar-thumb:hover { background: #64748b; }
-        * { transition-property: background-color, border-color, color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
-        table { border-collapse: collapse; width: 100%; }
-        tbody tr { border-bottom: 1px solid #e5e7eb; }
-        .dark tbody tr { border-bottom: 1px solid #374151; }
-        .recharts-tooltip-wrapper { outline: none; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
-        .modal-backdrop { animation: fadeIn 0.2s ease-out; }
-        .modal-content { animation: scaleIn 0.3s ease-out; }
-        .summary-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .summary-card:hover { transform: translateY(-4px); }
-        input:focus, select:focus { outline: none; ring: 2px; ring-color: #3b82f6; }
-        button:active { transform: scale(0.98); }
-        html { scroll-behavior: smooth; }
-      `}</style>
+      <style>{APP_STYLES}</style>
 
       <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? 'dark bg-gray-900' : 'bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50'}`}>
         {/* Header */}
@@ -855,3 +834,30 @@ export default function FinanceDashboard() {
     </>
   );
 }
+
+// ============================================================================
+// STYLES
+// ============================================================================
+const APP_STYLES = `
+  /* Global Styles */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 5px; }
+  ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+  .dark ::-webkit-scrollbar-thumb { background: #475569; }
+  .dark ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+  * { transition-property: background-color, border-color, color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+  table { border-collapse: collapse; width: 100%; }
+  tbody tr { border-bottom: 1px solid #e5e7eb; }
+  .dark tbody tr { border-bottom: 1px solid #374151; }
+  .recharts-tooltip-wrapper { outline: none; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+  .modal-backdrop { animation: fadeIn 0.2s ease-out; }
+  .modal-content { animation: scaleIn 0.3s ease-out; }
+  .summary-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+  .summary-card:hover { transform: translateY(-4px); }
+  input:focus, select:focus { outline: none; ring: 2px; ring-color: #3b82f6; }
+  button:active { transform: scale(0.98); }
+  html { scroll-behavior: smooth; }
+`;
